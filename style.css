@@ -53,7 +53,6 @@ h1, h2, h3 {
     font-weight: 300;
     opacity: 0; /* Initially hidden */
     transform: translate3d(0, -50px, 0);
-    transition: opacity 1s ease, transform 1s ease; /* Transition for text elements */
     -webkit-text-stroke: 1px black;
     color: white;
     text-shadow:
@@ -62,7 +61,30 @@ h1, h2, h3 {
        1px -1px 0 #000,
        -1px 1px 0 #000,
         1px 1px 0 #000;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,white);
+    animation : animate 3s linear infinite alternate-reverse;
+    
 }
+@keyframes animate {
+    0%{
+      color:white;
+      text-shadow:none;
+    }
+    50%{
+      text-shadow: 0 0 5px white,
+        0 0 20px white,
+        0 0 40px white,
+        0 0 80px white,
+        0 0 160px white
+    }
+    100%{
+      text-shadow: 0 0 5px white,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 160px cyan
+    }
+  }
 
 .swipe-wrap > div.active h1 {
     transition-delay: 0.5s; /* Delayed transition for staggering effect */
