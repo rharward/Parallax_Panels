@@ -63,22 +63,22 @@ h1, h2, h3 {
        1px -1px 0 #000,
        -1px 1px 0 #000,
         1px 1px 0 #000;
-/*start glowing text - Lori*/     
-    -webkit-box-reflect:below 1px linear-gradient(transparent,white);
-    animation : animate 3s linear infinite alternate-reverse;
+/*Start glowing text - Lori*/     
+  
+    animation : animateGlow 3s linear infinite alternate-reverse;
     
 }
-@keyframes animate {
+@keyframes animateGlow {
     0%{
       color:white;
       text-shadow:none;
     }
     50%{
       text-shadow: 0 0 5px white,
-        0 0 20px white,
-        0 0 40px white,
-        0 0 80px white,
-        0 0 160px white
+        0 0 20px yellow,
+        0 0 40px yellow,
+        0 0 80px yellow,
+        0 0 160px yellow
     }
     100%{
       text-shadow: 0 0 5px white,
