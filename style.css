@@ -7,7 +7,17 @@ html, body {
     text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     font-family: lato;
 }
+h1 {
+    font-size: 9em;
+}
 
+h2 {
+    font-size: 6em;
+}
+
+h3 {
+    font-size: 3em;
+}
 .swipe {
     overflow: hidden;
     position: absolute;
@@ -49,13 +59,14 @@ html, body {
 }
 
 h1, h2, h3 {
-    font-size: 4em;
+    /* font-size: 4em; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     opacity: 0; /* Initially hidden */
     transform: translate3d(0, -50px, 0);
     transition: opacity 1s ease, transform 1s ease; /* 
     Transition for text elements */
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /*text outline color*/
     color: white;
     text-shadow:
         3px 3px 0 #000,
