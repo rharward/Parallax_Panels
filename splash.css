@@ -71,10 +71,10 @@ body {
     border-radius: 10px;
     background: linear-gradient(rgb(21, 188, 171), rgb(16, 79, 72));
     
-    
 }
 h1 {
+  
     text-align: center;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     
 }
