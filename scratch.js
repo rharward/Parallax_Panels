@@ -4,6 +4,7 @@
 //     continuous: true
 //   })
 
+
 document.getElementById('submitBtn').addEventListener('click', function() {
     var bgImageUrl = document.getElementById('backgroundImageURL').value;
     var h1Text = document.getElementById('h1Text').value;

@@ -4,6 +4,39 @@
 //     continuous: true
 //   })
 
+
+trainingDiv1();
+trainingDiv2();
+
+function trainingDiv1 () {
+    var newDiv = document.createElement('div');
+    newDiv.style.backgroundImage = 'url(' + '//images.unsplash.com/photo-1441644599508-24ae08965c5c?w=1275' + ')';
+    newDiv.innerHTML = '<h1>' + 'the text is placed' + '</h1>' +
+                       '<h2>' + 'on layers that are' + '</h2>' +
+                       '<h3>' + 'translated on the z-axis' + '</h3>';
+
+    var swipeWrap = document.querySelector('.swipe-wrap');
+    swipeWrap.appendChild(newDiv);
+
+    // Update active slide
+    updateActiveSlide(newDiv);
+
+}
+function trainingDiv2() {
+    var newDiv = document.createElement('div');
+    newDiv.style.backgroundImage = 'url(' + '//images.unsplash.com/photo-1439792675105-701e6a4ab6f0?w=1275' + ')';
+    newDiv.innerHTML = '<h1>' + 'the script' + '</h1>' +
+                       '<h2>' + 'does not have to know' + '</h2>' +
+                       '<h3>' + 'anything about the layers' + '</h3>';
+
+    var swipeWrap = document.querySelector('.swipe-wrap');
+    swipeWrap.appendChild(newDiv);
+
+    // Update active slide
+    updateActiveSlide(newDiv);
+    
+}
+
 document.getElementById('submitBtn').addEventListener('click', function() {
     var bgImageUrl = document.getElementById('backgroundImageURL').value;
     var h1Text = document.getElementById('h1Text').value;
@@ -40,10 +73,11 @@ function nextSlide() {
     slides[nextIndex].classList.add('active');
 }
 
+
 setInterval(nextSlide, 3000); // Change slides every 3 seconds
 
-new Swipe(slider, {
-    speed: 600,
-    auto: 3000,
-    continuous: true
-  })
+// new Swipe(slider, {
+//     speed: 600,
+//     auto: 3000,
+//     continuous: true
+//   })
