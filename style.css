@@ -7,7 +7,17 @@ html, body {
     text-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     font-family: lato;
 }
+h1 {
+    font-size: 9em;
+}
 
+h2 {
+    font-size: 6em;
+}
+
+h3 {
+    font-size: 3em;
+}
 .swipe {
     overflow: hidden;
     position: absolute;
@@ -49,12 +59,14 @@ html, body {
 }
 
 h1, h2, h3 {
-    font-size: 4em;
+    /* font-size: 4em; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     opacity: 0; /* Initially hidden */
     transform: translate3d(0, -50px, 0);
-    transition: opacity 1s ease, transform 1s ease; /* Transition for text elements */
-    -webkit-text-stroke: 1px black;
+    transition: opacity 1s ease, transform 1s ease; /* 
+    Transition for text elements */
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /*text outline color*/
     color: white;
     text-shadow:
         3px 3px 0 #000,
@@ -62,7 +74,32 @@ h1, h2, h3 {
        1px -1px 0 #000,
        -1px 1px 0 #000,
         1px 1px 0 #000;
+/*Start glowing text - Lori*/     
+  
+    animation : animateGlow 3s linear infinite alternate-reverse;
+    
 }
+@keyframes animateGlow {
+    0%{
+      color:white;
+      text-shadow:none;
+    }
+    50%{
+      text-shadow: 0 0 5px white,
+        0 0 20px yellow,
+        0 0 40px yellow,
+        0 0 80px yellow,
+        0 0 160px yellow
+    }
+    100%{
+      text-shadow: 0 0 5px white,
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 80px cyan,
+        0 0 160px cyan
+    }
+  }
+/*End glowing text - Lori*/
 
 .swipe-wrap > div.active h1 {
     transition-delay: 0.5s; /* Delayed transition for staggering effect */
@@ -86,7 +123,7 @@ h1, h2, h3 {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(174, 166, 13, 0.636);
     padding: 10px;
     border-radius: 5px;
     z-index: 2; /* Ensure form is above slider */
